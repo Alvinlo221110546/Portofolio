@@ -136,18 +136,4 @@ particlesJS('particles-js', {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const skillItems = document.querySelectorAll('.skill-item');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible'); 
-                observer.unobserve(entry.target);
-            }
-        });
-    });
 
-    skillItems.forEach(item => {
-        observer.observe(item); 
-    });
-});
